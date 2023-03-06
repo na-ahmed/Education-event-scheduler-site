@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" >
+        <link rel="script" href="script.js" >
+        <meta charset="UTF-8">
+        <title>Event Scheduler</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+          </style>
+    </head>
+    <body>
+            
+            <header>
+                <img id="mernday_logo" src="../Frontend/Images/Company_logo_transparent.png"  alt="Company Logo"/>
+                <div id="top_nav">
+                    <nav>
+                            <p><a class="nav_element" href="./index.html"><span>HOME</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="nav_element" href="./events.html"><span>EVENTS</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="nav_element" href="./registration.html"><span>REGISTRATION</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="nav_element" href="./contact.html"><span>CONTACT</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </p>
+                        
+                    </nav>
+                </div>
+            </header>
+            <main>
+                
+                <h1 id="head_text">Send your queries or feedback:</h1>
+                <form>
+                  <div id="my_form">
+                    <p>We value your feedback and will get back to you at the earliest.</p>
+                    <label for="email"><b>Email</b></label>
+                      <input
+                        type="email"
+                        placeholder="Enter Email"
+                        name="email"
+                        id="email"
+                        required
+                      />
+                      <label><b>Message</b></label>
+                        <textarea id="tarea1" placeholder="Type your message"></textarea><br>
+                    <button id="nextStep">Submit</button>
+                  </div>
+                  
+                  <div id="thank_you" style="display: none;">
+                    <p>Thanks for filling up the form!</p>
+                    <button id ="close_btn" type="submit">Close</button>
+                  </div>
+                </form>
+                  
+                <!--Script for success on form feedback-->
+                  <script>
+                    var nextStep = document.querySelector('#nextStep');
+                  
+                  nextStep.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // Hide first view
+                    document.getElementById('my_form').style.display = 'none';
+                
+                    // Show thank you message element
+                    document.getElementById('thank_you').style.display = 'block';
+                  });
+
+                  var close_btn = document.querySelector('#close_btn');
+                  
+                  close_btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // Hide first view
+                    document.getElementById('my_form').style.display = 'inherit';
+                
+                    // Show thank you message element
+                    document.getElementById('thank_you').style.display = 'none';
+                  });
+                  </script>
+            </main><br>
+            <footer>
+                
+                <p>&#169Copyright 2023 Mernday Blues. All rights reserved.</p>
+                
+            </footer>
+        
+    </body>
+</html>

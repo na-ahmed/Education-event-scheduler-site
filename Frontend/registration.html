@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" >
+        <link rel="script" href="script.js" >
+        <meta charset="UTF-8">
+        <title>Event Scheduler</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+          </style>
+    </head>
+    <body>
+            
+            <header>
+                <img id="mernday_logo" src="../Frontend/Images/Company_logo_transparent.png"  alt="Company Logo"/>
+                <div id="top_nav">
+                    <nav>
+                            <p><a class="nav_element" href="./index.html"><span>HOME</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="nav_element" href="./events.html"><span>EVENTS</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="nav_element" href="./registration.html"><span>REGISTRATION</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a class="nav_element" href="./contact.html"><span>CONTACT</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </p>
+                        
+                    </nav>
+                </div>
+            </header>
+            <main>
+                
+                
+                <div>
+                <form>
+                    <!-- id named "registration_form" is assigned to div -->
+                    <div id="registration_form">
+                        <h1 id="head_text">Register</h1>
+                      <p>Kindly fill in this form to register for an event.</p>
+                      <label for="name"><b>Full name</b></label>
+                      <input
+                        type="text"
+                        placeholder="Enter Full Name"
+                        name="name"
+                        id="name"
+                        required
+                      />
+              
+                      <label for="email"><b>Email</b></label>
+                      <input
+                        type="email"
+                        placeholder="Enter Email"
+                        name="email"
+                        id="email"
+                        required
+                      />
+              
+                      <label for="dob"><b>Date Of Birth</b></label>
+                      <input
+                        type="date"
+                        placeholder="Enter Password"
+                        name="dob"
+                        id="dob"
+                        required
+                      />
+              
+                      <label for="phone_number"><b>Phone Number</b></label>
+                      <input
+                        type="tel"
+                        placeholder="Enter Phone Number"
+                        name="phone_number"
+                        id="phone_number"
+                        required
+                      />
+                      <label for="event"><b>Select Event</b></label>
+                      <select id="event" name="event" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="web_dev_workshop">Web Dev Workshop-01/04/2023</option>
+                        <option value="job_fair">Job Fair-04/04/2023</option>
+                        <option value="cultural_fest">Cultural Fest-08/04/2023</option>
+                      </select><br>
+                      <div id="newsletter_checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter"/><label>&nbsp Subscribe to newsletter</label>
+                      </div>
+                      <button onclick="myFunction()" type="submit" >Register</button><br>
+
+                      
+                    </div>
+                    <script>
+                      function myFunction() {
+                        alert("Successfully registered \n\n Thank You");
+                      }
+                    </script>
+              
+                    
+                  </form>
+                  
+                  
+                </div>
+              
+            </main><br>
+            <footer>
+                
+                <p>&#169Copyright 2023 Mernday Blues. All rights reserved.</p>
+                
+            </footer>
+        
+    </body>
+</html>
